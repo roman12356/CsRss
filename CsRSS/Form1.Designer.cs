@@ -28,27 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.URLtextBox = new System.Windows.Forms.TextBox();
             this.buttonURL = new System.Windows.Forms.Button();
             this.TitlescomboBox = new System.Windows.Forms.ComboBox();
             this.DescriptiontextBox = new System.Windows.Forms.TextBox();
             this.buttonGoTo = new System.Windows.Forms.Button();
             this.URLcomboBox = new System.Windows.Forms.ComboBox();
+            this.buttonDodajKanal = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // URLtextBox
-            // 
-            this.URLtextBox.Location = new System.Drawing.Point(12, 31);
-            this.URLtextBox.Name = "URLtextBox";
-            this.URLtextBox.Size = new System.Drawing.Size(351, 20);
-            this.URLtextBox.TabIndex = 0;
-            this.URLtextBox.Text = "RSS URL";
             // 
             // buttonURL
             // 
-            this.buttonURL.Location = new System.Drawing.Point(369, 28);
+            this.buttonURL.Location = new System.Drawing.Point(491, 15);
+            this.buttonURL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonURL.Name = "buttonURL";
-            this.buttonURL.Size = new System.Drawing.Size(75, 23);
+            this.buttonURL.Size = new System.Drawing.Size(100, 28);
             this.buttonURL.TabIndex = 1;
             this.buttonURL.Text = "Odśwież";
             this.buttonURL.UseVisualStyleBackColor = true;
@@ -57,9 +50,10 @@
             // TitlescomboBox
             // 
             this.TitlescomboBox.FormattingEnabled = true;
-            this.TitlescomboBox.Location = new System.Drawing.Point(12, 73);
+            this.TitlescomboBox.Location = new System.Drawing.Point(16, 90);
+            this.TitlescomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TitlescomboBox.Name = "TitlescomboBox";
-            this.TitlescomboBox.Size = new System.Drawing.Size(351, 21);
+            this.TitlescomboBox.Size = new System.Drawing.Size(467, 24);
             this.TitlescomboBox.TabIndex = 2;
             this.TitlescomboBox.Text = "Tytuł RSS";
             this.TitlescomboBox.SelectedIndexChanged += new System.EventHandler(this.TitlescomboBox_SelectedIndexChanged);
@@ -68,18 +62,20 @@
             // 
             this.DescriptiontextBox.BackColor = System.Drawing.SystemColors.Control;
             this.DescriptiontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DescriptiontextBox.Location = new System.Drawing.Point(12, 117);
+            this.DescriptiontextBox.Location = new System.Drawing.Point(16, 144);
+            this.DescriptiontextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DescriptiontextBox.Multiline = true;
             this.DescriptiontextBox.Name = "DescriptiontextBox";
             this.DescriptiontextBox.ReadOnly = true;
-            this.DescriptiontextBox.Size = new System.Drawing.Size(351, 306);
+            this.DescriptiontextBox.Size = new System.Drawing.Size(467, 376);
             this.DescriptiontextBox.TabIndex = 3;
             // 
             // buttonGoTo
             // 
-            this.buttonGoTo.Location = new System.Drawing.Point(369, 117);
+            this.buttonGoTo.Location = new System.Drawing.Point(492, 144);
+            this.buttonGoTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonGoTo.Name = "buttonGoTo";
-            this.buttonGoTo.Size = new System.Drawing.Size(75, 23);
+            this.buttonGoTo.Size = new System.Drawing.Size(100, 28);
             this.buttonGoTo.TabIndex = 4;
             this.buttonGoTo.Text = "Idź do...";
             this.buttonGoTo.UseVisualStyleBackColor = true;
@@ -88,23 +84,36 @@
             // URLcomboBox
             // 
             this.URLcomboBox.FormattingEnabled = true;
-            this.URLcomboBox.Location = new System.Drawing.Point(13, 4);
+            this.URLcomboBox.Location = new System.Drawing.Point(16, 15);
+            this.URLcomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.URLcomboBox.Name = "URLcomboBox";
-            this.URLcomboBox.Size = new System.Drawing.Size(350, 21);
+            this.URLcomboBox.Size = new System.Drawing.Size(465, 24);
             this.URLcomboBox.TabIndex = 5;
+            // 
+            // buttonDodajKanal
+            // 
+            this.buttonDodajKanal.Location = new System.Drawing.Point(492, 48);
+            this.buttonDodajKanal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDodajKanal.Name = "buttonDodajKanal";
+            this.buttonDodajKanal.Size = new System.Drawing.Size(100, 28);
+            this.buttonDodajKanal.TabIndex = 6;
+            this.buttonDodajKanal.Text = "Dodaj kanał";
+            this.buttonDodajKanal.UseVisualStyleBackColor = true;
+            this.buttonDodajKanal.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 435);
+            this.ClientSize = new System.Drawing.Size(599, 535);
+            this.Controls.Add(this.buttonDodajKanal);
             this.Controls.Add(this.URLcomboBox);
             this.Controls.Add(this.buttonGoTo);
             this.Controls.Add(this.DescriptiontextBox);
             this.Controls.Add(this.TitlescomboBox);
             this.Controls.Add(this.buttonURL);
-            this.Controls.Add(this.URLtextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
@@ -116,12 +125,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox URLtextBox;
         private System.Windows.Forms.Button buttonURL;
         private System.Windows.Forms.ComboBox TitlescomboBox;
         private System.Windows.Forms.TextBox DescriptiontextBox;
         private System.Windows.Forms.Button buttonGoTo;
         private System.Windows.Forms.ComboBox URLcomboBox;
+        private System.Windows.Forms.Button buttonDodajKanal;
     }
 }
 
